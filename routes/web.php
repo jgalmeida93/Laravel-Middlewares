@@ -11,7 +11,7 @@
 |
 */
 
-use App\Http\Middleware\PrimeiroMiddleware;
+// use App\Http\Middleware\PrimeiroMiddleware;
 
 Route::get('/', function () {
     return view('welcome');
