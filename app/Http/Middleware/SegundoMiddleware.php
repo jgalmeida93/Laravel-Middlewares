@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Log;
 
 class SegundoMiddleware
 {
@@ -15,6 +16,7 @@ class SegundoMiddleware
      */
     public function handle($request, Closure $next)
     {
+        Log::debug('Passou pelo segundo middleware');
         return $next($request);
     }
 }

@@ -17,6 +17,7 @@ class PrimeiroMiddleware
     public function handle($request, Closure $next)
     {
         Log::debug('Passou pelo primeiro middleware');
-        return $next($request);
+        // return $next($request);
+        return response('Parando a cadeia de chamadas');
     }
 }
