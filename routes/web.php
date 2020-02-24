@@ -17,5 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuarios', 'UsuarioControlador@index')->
-       middleware('primeiro');
+Route::get('/usuarios', 'UsuarioControlador@index');
