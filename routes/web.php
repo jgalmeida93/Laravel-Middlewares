@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', 'UsuarioControlador@index')->
-       middleware(PrimeiroMiddleware::class);
+       middleware('primeiro');
