@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', 'UsuarioControlador@index')->middleware('primeiro', 'segundo');
+
+Route::get('/terceiro', function () {
+    return 'passou pelo terceiro middleware';
+})->middleware('terceiro:jonas,26');

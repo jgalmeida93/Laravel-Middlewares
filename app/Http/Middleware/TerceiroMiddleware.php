@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Log;
 
 class TerceiroMiddleware
 {
@@ -13,8 +14,9 @@ class TerceiroMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $nome, $idade)
     {
+        Log::debug("Passou pelo terceiro middleware [ nome = $nome, idade = $idade ]");
         return $next($request);
     }
 }
